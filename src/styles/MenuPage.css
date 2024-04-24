@@ -31,14 +31,15 @@
 .food-display {
   display: flex;
   width: 38vw;
-
+  justify-content: center;
   align-items: center;
   padding: 2rem;
   border-bottom: 1px solid rgb(192, 192, 192);
+  gap: 3rem;
 }
 
-.food-display div {
-  margin-left: 1.8rem;
+.food-display-main-content {
+  width: 24vw;
 }
 
 .food-display h3 {
@@ -52,12 +53,6 @@
   margin-top: 0.5rem;
 }
 
-.food-display-image {
-  width: 10rem;
-  height: 6.9rem;
-  border-radius: 10px;
-}
-
 /* FOOD DISPLAY GRID COMPONENT */
 
 .food-display-grid {
@@ -69,6 +64,53 @@
 }
 
 /* FOOD SECTION COMPONENT */
-  .food-section {
-    margin-top: 5rem;
-  }
+.food-section {
+  margin-top: 5rem;
+}
+
+/* LIKES COMPONENT */
+
+.likes {
+  position: relative;
+}
+
+.likes:hover {
+  cursor: pointer;
+}
+
+.heart-circle {
+  border: 1px solid rgba(0, 0, 0, 0.13);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.2rem;
+  border-radius: 100px;
+  box-shadow: 0 0 4px rgb(175, 175, 175);
+  position: relative;
+  background-color: white;
+}
+
+.heart-circle:hover .heart {
+  color: rgb(245, 43, 43);
+}
+
+.heart {
+  font-size: 1.5rem;
+  transition: 0.2s ease-in-out;
+}
+
+.like-amount {
+  background-color: rgba(0, 0, 0, 0.082);
+  border-radius: 15px;
+  width: 60px;
+  height: 55px;
+  position: absolute;
+  top: 31px;
+  z-index: -1;
+  font-size: 1.05rem;
+  display: flex;
+  align-items: end;
+  justify-content: center;
+  padding-bottom: 0.4rem;
+  color: rgba(0, 0, 0, 0.685);
+}

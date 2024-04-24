@@ -6,14 +6,23 @@ import '../styles/MenuPage.css';
 import { useEffect, useState } from 'react';
 
 export default function MenuPage() {
-  const [foodData, setFoodData] = useState('foooood');
+  const [foodData, setFoodData] = useState([]);
+
+  function sortOutCuisineTypes(array) {
+    let allCuisineTypes = [];
+    for (let object of array) {
+      allCuisineTypes.push(object.cuisine_type);
+    }
+    let sortedArray = allCuisineTypes.sort();
+    return sortedArray.filter((e, i) => sortedArray.indexOf(e) === i);
+  }
 
   useEffect(() => {
     async function fetchFoodData() {
       try {
         const res = await axios.get('https://www.jsonkeeper.com/b/MDXW');
         setFoodData(res.data);
-        console.log(res.data);
+        console.log('full data array, ', res.data);
       } catch (err) {
         console.log(err);
       }
@@ -21,14 +30,20 @@ export default function MenuPage() {
 
     fetchFoodData();
   }, []);
+
   return (
     <div>
       <Navbar />
       <main className="menu-page">
-        <div>{foodData[0].title}</div>
-        <FoodSection foodData={foodData} />
-        <FoodSection />
-        <FoodSection />
+        {sortOutCuisineTypes(foodData).map((e) => {
+          return (
+            <FoodSection
+              foodData={foodData}
+              heading={e}
+              key={sortOutCuisineTypes(foodData).indexOf(e)}
+            />
+          );
+        })}
       </main>
       <Footer />
     </div>
