@@ -1,13 +1,16 @@
 import Navbar from './Navbar';
 import FoodSection from './FoodSection';
 import Footer from './Footer';
+import '../styles/MenuPage.css';
 
 export default function MenuPage() {
   return (
-    <main>
+    <div>
       <Navbar />
-      <FoodSection />
+      <main className="menu-page">
+        <FoodSection />
+      </main>
       <Footer />
-    </main>
+    </div>
   );
 }
