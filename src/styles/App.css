@@ -1,4 +1,37 @@
 html,
 body {
   font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+
+/* NAVBAR COMPONENT */
+
+.navbar img {
+  height: 4rem;
+  width: 7rem;
+}
+
+.navbar {
+  background-color: rgb(36, 83, 153);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 3rem;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.479);
+}
+
+.nav-links {
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: white;
+  font-size: 1.3rem;
+  transition: 0.2s ease-in-out;
+}
+
+.nav-link:hover {
+  color: rgba(255, 255, 255, 0.493);
 }
