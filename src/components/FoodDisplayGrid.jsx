@@ -1,3 +1,9 @@
+import FoodDisplay from './FoodDisplay';
+
 export default function FoodDisplayGrid() {
-  return <div>Food Display Grid</div>;
+  return (
+    <div>
+      <FoodDisplay />
+    </div>
+  );
 }

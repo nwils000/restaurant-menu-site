@@ -1,3 +1,11 @@
+import FoodTypeHeading from './FoodTypeHeading';
+import FoodDisplayGrid from './FoodDisplayGrid';
+
 export default function FoodSection() {
-  return <div>Food Section</div>;
+  return (
+    <div>
+      <FoodTypeHeading />
+      <FoodDisplayGrid />
+    </div>
+  );
 }
