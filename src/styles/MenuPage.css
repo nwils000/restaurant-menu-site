@@ -20,5 +20,11 @@
 }
 
 .food-type-heading-hr-lines:last-of-type {
-  margin-top: 4px;
+  margin-top: 3px;
+}
+
+.food-display-image {
+  width: 11rem;
+  height: 8rem;
+  border-radius: 10px;
 }

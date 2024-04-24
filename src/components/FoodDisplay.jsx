@@ -1,3 +1,7 @@
 export default function FoodDisplay() {
-  return <div>Food Display</div>;
+  return (
+    <section>
+      <img src="/assets/BIRDS.png" alt="birds" className="food-display-image" />
+    </section>
+  );
 }
