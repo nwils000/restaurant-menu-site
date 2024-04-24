@@ -9,6 +9,8 @@ export default function MenuPage() {
       <Navbar />
       <main className="menu-page">
         <FoodSection />
+        <FoodSection />
+        <FoodSection />
       </main>
       <Footer />
     </div>

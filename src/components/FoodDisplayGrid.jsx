@@ -7,7 +7,6 @@ export default function FoodDisplayGrid() {
       <FoodDisplay />
       <FoodDisplay />
       <FoodDisplay />
-      <FoodDisplay />
     </div>
   );
 }

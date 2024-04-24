@@ -3,7 +3,7 @@ import FoodDisplayGrid from './FoodDisplayGrid';
 
 export default function FoodSection() {
   return (
-    <div>
+    <div className="food-section">
       <FoodTypeHeading />
       <FoodDisplayGrid />
     </div>

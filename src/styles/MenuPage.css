@@ -67,3 +67,8 @@
   justify-items: center;
   column-gap: 2rem;
 }
+
+/* FOOD SECTION COMPONENT */
+  .food-section {
+    margin-top: 5rem;
+  }
