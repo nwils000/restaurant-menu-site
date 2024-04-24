@@ -1,5 +1,6 @@
 .menu-page {
   color: rgb(0, 0, 36);
+  margin: 0 5rem;
 }
 
 /* FOOD TYPE HEADING COMPONENT */
@@ -16,9 +17,9 @@
 }
 
 .food-type-heading-hr-lines {
-  background-color: black;
-  height: 4px;
-  width: 85vw;
+  background-color: rgb(43, 43, 43);
+  height: 3px;
+  width: 100%;
 }
 
 .food-type-heading-hr-lines:last-of-type {
@@ -29,9 +30,11 @@
 
 .food-display {
   display: flex;
-  width: 38.5rem;
-  background-color: aliceblue;
+  width: 38vw;
+
   align-items: center;
+  padding: 2rem;
+  border-bottom: 1px solid rgb(192, 192, 192);
 }
 
 .food-display div {
@@ -53,4 +56,14 @@
   width: 11rem;
   height: 8rem;
   border-radius: 10px;
+}
+
+/* FOOD DISPLAY GRID COMPONENT */
+
+.food-display-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-content: center;
+  justify-items: center;
+  column-gap: 2rem;
 }
