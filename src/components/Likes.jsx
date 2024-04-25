@@ -12,8 +12,8 @@ export default function Likes() {
     <div className="likes">
       <div className="heart-circle" onClick={handleClick}>
         <FaRegHeart className="heart" />
-        <div className="like-amount">{likes}</div>
       </div>
+      <div className="like-amount">{likes}</div>
     </div>
   );
 }

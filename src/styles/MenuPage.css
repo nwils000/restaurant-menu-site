@@ -103,8 +103,9 @@
   padding: 1.2rem;
   border-radius: 100px;
   box-shadow: 0 0 4px rgb(175, 175, 175);
-  position: relative;
   background-color: white;
+  position: relative;
+  z-index: 2;
 }
 
 .heart-circle:hover .heart {
@@ -117,17 +118,42 @@
 }
 
 .like-amount {
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bold;
   background-color: rgba(0, 0, 0, 0.082);
   border-radius: 15px;
   width: 60px;
   height: 55px;
   position: absolute;
   top: 31px;
-  z-index: -1;
+  left: 1px;
+  z-index: 1;
   font-size: 1.05rem;
   display: flex;
   align-items: end;
   justify-content: center;
   padding-bottom: 0.4rem;
   color: rgba(0, 0, 0, 0.685);
+}
+
+@media screen and (max-width: 1410px) {
+  .food-display-grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    align-content: center;
+    justify-items: center;
+    column-gap: 2rem;
+  }
+}
+
+@media screen and (max-width: 1128px) {
+  .food-display {
+    width: 60vw;
+  }
+  .food-display-main-content {
+    width: 50vw;
+  }
+}
+
+@media screen and (max-width: 712px) {
 }
