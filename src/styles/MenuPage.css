@@ -126,7 +126,7 @@
   height: 55px;
   position: absolute;
   top: 31px;
-  left: 1px;
+  left: 2px;
   z-index: 1;
   font-size: 1.05rem;
   display: flex;
@@ -155,5 +155,41 @@
   }
 }
 
-@media screen and (max-width: 712px) {
+@media screen and (max-width: 970px) {
+  .food-type-heading h2 {
+    font-size: 1.2rem;
+  }
+  .menu-page h1 {
+    font-size: 3rem;
+  }
+}
+
+@media screen and (max-width: 970px) {
+  .likes {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 852px) {
+  .menu-page {
+    margin: 2rem;
+  }
+  .food-display {
+    text-align: center;
+    flex-direction: column-reverse;
+    gap: 0;
+  }
+}
+
+@media screen and (max-width: 570px) {
+  .food-display h3 {
+    font-size: 1rem;
+  }
+
+  .food-display p {
+    font-size: 0.8rem;
+  }
+  .food-display {
+    padding: 1rem;
+  }
 }

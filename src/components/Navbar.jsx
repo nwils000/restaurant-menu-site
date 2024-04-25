@@ -10,8 +10,8 @@ export default function Navbar() {
         <Link className="nav-link" to="/menu">
           Menu
         </Link>
-        <Link className="nav-link" to="/menu">
-          Contact
+        <Link className="nav-link" to="/reservations">
+          Reservations
         </Link>
       </div>
     </div>

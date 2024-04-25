@@ -1,0 +1,35 @@
+.reservation-modal {
+  font-family: 'Kalam', cursive;
+  font-weight: 400;
+  letter-spacing: 2px;
+  word-spacing: -2px;
+  width: 16rem;
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  background-color: #f9f9f9;
+  z-index: 10;
+  padding: 1.5rem 2.8rem;
+  border-radius: 20px;
+  box-shadow: 1px 1px 7px rgba(0, 0, 0, 0.468);
+  text-align: center;
+}
+
+.reservation-modal p:first-of-type {
+  font-size: 1.3rem;
+  text-align: center;
+  font-weight: bold;
+}
+
+.close-modal {
+  position: absolute;
+  top: -20px;
+  right: 1rem;
+  font-size: 1.8rem;
+  font-weight: bolder;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.192);
+}
+
+.close-modal:hover {
+  cursor: pointer;
+}

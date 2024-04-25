@@ -1,4 +1,3 @@
-import Navbar from './Navbar';
 import FoodSection from './FoodSection';
 import Footer from './Footer';
 import axios from 'axios';
@@ -22,7 +21,6 @@ export default function MenuPage() {
       try {
         const res = await axios.get('https://www.jsonkeeper.com/b/MDXW');
         setFoodData(res.data);
-        console.log('full data array, ', res.data);
       } catch (err) {
         console.log(err);
       }
@@ -33,7 +31,6 @@ export default function MenuPage() {
 
   return (
     <div>
-      <Navbar />
       <main className="menu-page">
         <h1>Full Menu</h1>
         {sortOutCuisineTypes(foodData).map((e) => {
