@@ -9,7 +9,12 @@ export default function FoodDisplayGrid(props) {
     <div className="food-display-grid">
       {filteredArray.map((e, i) => {
         return (
-          <FoodDisplay title={e.title} description={e.description} key={i} />
+          <FoodDisplay
+            title={e.title}
+            description={e.description}
+            price={e.price}
+            key={i}
+          />
         );
       })}
     </div>

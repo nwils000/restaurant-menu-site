@@ -35,6 +35,7 @@ export default function MenuPage() {
     <div>
       <Navbar />
       <main className="menu-page">
+        <h1>Full Menu</h1>
         {sortOutCuisineTypes(foodData).map((e) => {
           return (
             <FoodSection

@@ -3,6 +3,16 @@
   margin: 0 5rem;
 }
 
+.menu-page h1 {
+  text-decoration: underline;
+  font-size: 4rem;
+  text-align: center;
+  margin-top: 3rem;
+  margin-bottom: 0;
+  position: relative;
+  top: 2rem;
+}
+
 /* FOOD TYPE HEADING COMPONENT */
 
 .food-type-heading {
@@ -51,6 +61,13 @@
 
 .food-display p {
   margin-top: 0.5rem;
+}
+
+.food-display-description {
+  font-family: 'Kalam', cursive;
+  font-weight: 400;
+  letter-spacing: 1px;
+  word-spacing: 2px;
 }
 
 /* FOOD DISPLAY GRID COMPONENT */

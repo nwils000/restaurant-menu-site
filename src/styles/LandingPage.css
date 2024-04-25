@@ -1,0 +1,70 @@
+.landing-page {
+  display: flex;
+  margin: 6rem 5rem;
+  justify-content: center;
+  align-items: center;
+  gap: 7rem;
+}
+
+.landing-page-h1 {
+  font-size: 3rem;
+}
+
+.landing-page-sub-text {
+  font-family: 'Kalam', cursive;
+  font-weight: 400;
+  font-size: 1.4rem;
+  color: rgba(0, 0, 0, 0.644);
+}
+
+.landing-page-hero-text-wrapper {
+  width: fit-content;
+}
+
+.landing-page-hero-image {
+  height: 30rem;
+}
+
+@media screen and (max-width: 1230px) {
+  .landing-page {
+    gap: 4rem;
+  }
+}
+
+@media screen and (max-width: 1120px) {
+  .landing-page-hero-image {
+    height: 20rem;
+  }
+  .landing-page-h1 {
+    font-size: 2rem;
+  }
+
+  .landing-page-sub-text {
+    font-size: 0.95rem;
+  }
+}
+
+@media screen and (max-width: 852px) {
+  .landing-page {
+    margin-top: 1.5rem;
+  }
+  .landing-page-hero-image {
+    height: 18rem;
+  }
+  .landing-page {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .landing-page-h1 {
+    margin-bottom: 0;
+  }
+
+  .landing-page-hero-text-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+}

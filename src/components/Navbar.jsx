@@ -4,7 +4,7 @@ export default function Navbar() {
   return (
     <div className="navbar">
       <Link to="/" className="logo-link">
-        <img src="/assets/BIRDS.png" alt="birds" />
+        Earth Food
       </Link>
       <div className="nav-links">
         <Link className="nav-link" to="/menu">
