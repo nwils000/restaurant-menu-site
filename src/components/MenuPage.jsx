@@ -5,6 +5,8 @@ import { useEffect, useState } from 'react';
 
 export default function MenuPage() {
   const [foodData, setFoodData] = useState([]);
+  const [selectedCountry, setSelectedCountry] = useState([]);
+  const [fullMenu, setFullMenu] = useState([]);
 
   function sortOutCuisineTypes(array) {
     let allCuisineTypes = [];
@@ -15,11 +17,20 @@ export default function MenuPage() {
     return sortedArray.filter((e, i) => sortedArray.indexOf(e) === i);
   }
 
+  function handleChange(e) {
+    setSelectedCountry(() => {
+      return [e.target.value];
+    });
+    console.log(selectedCountry);
+  }
+
   useEffect(() => {
     async function fetchFoodData() {
       try {
         const res = await axios.get('https://www.jsonkeeper.com/b/MDXW');
         setFoodData(res.data);
+        setSelectedCountry(sortOutCuisineTypes(res.data));
+        setFullMenu(sortOutCuisineTypes(res.data));
       } catch (err) {
         console.log(err);
       }
@@ -31,13 +42,31 @@ export default function MenuPage() {
   return (
     <div>
       <main className="menu-page">
+        <div className="country-picker">
+          <label htmlFor="countries">Pick a Country</label>
+          <select id="countries" onChange={handleChange}>
+            <option key={-1} value={fullMenu}>
+              Full Menu
+            </option>
+            {sortOutCuisineTypes(foodData).map((e) => {
+              return (
+                <option
+                  key={sortOutCuisineTypes(foodData).indexOf(e)}
+                  value={e}
+                >
+                  {e}
+                </option>
+              );
+            })}
+          </select>
+        </div>
         <h1>Full Menu</h1>
-        {sortOutCuisineTypes(foodData).map((e) => {
+        {selectedCountry.map((e) => {
           return (
             <FoodSection
               foodData={foodData}
               heading={e}
-              key={sortOutCuisineTypes(foodData).indexOf(e)}
+              key={sortOutCuisineTypes(foodData).indexOf(e) + 0.1}
             />
           );
         })}

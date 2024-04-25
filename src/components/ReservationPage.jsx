@@ -6,7 +6,6 @@ export default function ReservationPage() {
   const { formData, setFormData, handleSubmit } = useContext(GlobalFormData);
 
   function handleChange(e) {
-    console.log(e.target.value);
     setFormData((prevFormData) => {
       return {
         ...prevFormData,
