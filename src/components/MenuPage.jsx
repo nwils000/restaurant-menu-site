@@ -1,5 +1,4 @@
 import FoodSection from './FoodSection';
-import Footer from './Footer';
 import axios from 'axios';
 import '../styles/MenuPage.css';
 import { useEffect, useState } from 'react';
@@ -43,7 +42,6 @@ export default function MenuPage() {
           );
         })}
       </main>
-      <Footer />
     </div>
   );
 }

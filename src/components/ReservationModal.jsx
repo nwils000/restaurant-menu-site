@@ -14,10 +14,10 @@ export default function ReservationPage() {
       <p className="close-modal" onClick={closeModal}>
         X
       </p>
-      <p>Name:{formData.name}</p>
-      <p>Party Size:{formData.partySize}</p>
-      <p>Date:{formData.date}</p>
-      <p>Time:{formData.time}</p>
+      <p>Name: {formData.name}</p>
+      <p>Party Size: {formData.partySize}</p>
+      <p>Date: {formData.date}</p>
+      <p>Time: {formData.time}</p>
     </div>
   );
 }
