@@ -98,3 +98,13 @@
   align-items: start;
   gap: 1rem;
 }
+
+@media screen and (max-width: 1185px) {
+  .footer-first-section {
+    flex-direction: column;
+    text-align: center;
+  }
+  .location-contact-wrapper {
+    align-items: center;
+  }
+}
