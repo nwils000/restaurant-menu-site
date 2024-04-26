@@ -8,6 +8,7 @@ export default function MenuPage() {
   const [selectedCountry, setSelectedCountry] = useState([]);
   const [fullMenu, setFullMenu] = useState([]);
 
+  // Function that loops through the JSON and returns an array of each unique cuisine type.
   function sortOutCuisineTypes(array) {
     let allCuisineTypes = [];
     for (let object of array) {
@@ -17,6 +18,7 @@ export default function MenuPage() {
     return sortedArray.filter((e, i) => sortedArray.indexOf(e) === i);
   }
 
+  // Function that handles the select element values.
   function handleChange(e) {
     if (e.target.value.length > 20) {
       setSelectedCountry(() => {
@@ -27,9 +29,10 @@ export default function MenuPage() {
         return [e.target.value];
       });
     }
-    console.log(typeof e.target.value);
+    console.log('hiii', selectedCountry);
   }
 
+  // Fetches data and saves it in state on page load.
   useEffect(() => {
     async function fetchFoodData() {
       try {
@@ -39,7 +42,6 @@ export default function MenuPage() {
         setFoodData(res.data);
         setSelectedCountry(sortOutCuisineTypes(res.data));
         setFullMenu(sortOutCuisineTypes(res.data));
-        console.log('hiii', sortOutCuisineTypes(res.data));
       } catch (err) {
         console.log(err);
       }
@@ -57,6 +59,7 @@ export default function MenuPage() {
             <option key={-1} value={fullMenu}>
               Full Menu
             </option>
+            {/* Loops through array of cuisine types to create option elements. */}
             {sortOutCuisineTypes(foodData).map((e) => {
               return (
                 <option
@@ -70,6 +73,7 @@ export default function MenuPage() {
           </select>
         </div>
         <h1>Menu</h1>
+        {/* Loops through the selected country and creates a FoodSection component for each*/}
         {selectedCountry.map((e) => {
           return (
             <FoodSection

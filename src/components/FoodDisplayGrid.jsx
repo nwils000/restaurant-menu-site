@@ -6,6 +6,7 @@ export default function FoodDisplayGrid(props) {
   );
   return (
     <div className="food-display-grid">
+      {/* Loops through every menu item with cuisine_type that matches the heading and creates a FoodDisplay component*/}
       {filteredArray.map((e, i) => {
         return (
           <FoodDisplay
