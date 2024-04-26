@@ -31,9 +31,9 @@ export default function Footer() {
               </div>
             </div>
             <div>
-              <p className="landing-page-h1 footer-logo">
-                <Link to="/">Earth Food</Link>
-              </p>
+              <Link className="landing-page-h1 footer-logo" to="/">
+                Earth Food
+              </Link>
             </div>
             <div className="open-hours">
               <div className="mon-thu">

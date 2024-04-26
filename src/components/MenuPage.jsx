@@ -33,7 +33,9 @@ export default function MenuPage() {
   useEffect(() => {
     async function fetchFoodData() {
       try {
-        const res = await axios.get('https://www.jsonkeeper.com/b/MDXW');
+        const res = await axios.get(
+          'https://raw.githubusercontent.com/bootcamp-students/random-restaurant-json/main/foodList.json'
+        );
         setFoodData(res.data);
         setSelectedCountry(sortOutCuisineTypes(res.data));
         setFullMenu(sortOutCuisineTypes(res.data));
