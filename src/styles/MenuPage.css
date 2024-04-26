@@ -63,7 +63,6 @@
 }
 
 .food-display-description {
-  font-family: 'Kalam', cursive;
   font-weight: 400;
   letter-spacing: 1px;
   word-spacing: 2px;
@@ -117,8 +116,8 @@
 }
 
 .like-amount {
-  font-family: 'Courier New', Courier, monospace;
   font-weight: bold;
+  font-family: 'Courier New', Courier, monospace;
   background-color: rgba(0, 0, 0, 0.082);
   border-radius: 15px;
   width: 60px;

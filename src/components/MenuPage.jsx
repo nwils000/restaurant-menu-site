@@ -18,10 +18,16 @@ export default function MenuPage() {
   }
 
   function handleChange(e) {
-    setSelectedCountry(() => {
-      return [e.target.value];
-    });
-    console.log(selectedCountry);
+    if (e.target.value.length > 20) {
+      setSelectedCountry(() => {
+        return e.target.value.split(',');
+      });
+    } else {
+      setSelectedCountry(() => {
+        return [e.target.value];
+      });
+    }
+    console.log(typeof e.target.value);
   }
 
   useEffect(() => {
@@ -31,6 +37,7 @@ export default function MenuPage() {
         setFoodData(res.data);
         setSelectedCountry(sortOutCuisineTypes(res.data));
         setFullMenu(sortOutCuisineTypes(res.data));
+        console.log('hiii', sortOutCuisineTypes(res.data));
       } catch (err) {
         console.log(err);
       }
@@ -60,7 +67,7 @@ export default function MenuPage() {
             })}
           </select>
         </div>
-        <h1>Full Menu</h1>
+        <h1>Menu</h1>
         {selectedCountry.map((e) => {
           return (
             <FoodSection

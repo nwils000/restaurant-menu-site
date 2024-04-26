@@ -3,6 +3,7 @@ import App from './components/App';
 import MenuPage from './components/MenuPage';
 import ReservationPage from './components/ReservationPage';
 import Navbar from './components/Navbar';
+import Footer from './components/Footer';
 import ReservationModal from './components/ReservationModal';
 import { createContext, useState } from 'react';
 import { createBrowserRouter, RouterProvider, Outlet } from 'react-router-dom';
@@ -60,11 +61,14 @@ function Layout() {
       <GlobalFormData.Provider
         value={{ formData, setFormData, handleSubmit, closeModal }}
       >
-        <Navbar />
-        <div id="page-content">
-          <Outlet />
+        <div style={{ minHeight: '100vh' }}>
+          <Navbar />
+          <div id="page-content">
+            <Outlet />
+          </div>
+          <ReservationModal />
         </div>
-        <ReservationModal />
+        <Footer />
       </GlobalFormData.Provider>
     </>
   );

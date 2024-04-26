@@ -1,6 +1,6 @@
 .landing-page {
   display: flex;
-  margin: 6rem 5rem 0;
+  margin: 4.5rem 5rem 0;
   justify-content: center;
   align-items: center;
   gap: 7rem;
@@ -8,10 +8,11 @@
 
 .landing-page-h1 {
   font-size: 3rem;
+  font-family: 'Satisfy', cursive;
+  margin-bottom: 0;
 }
 
 .landing-page-sub-text {
-  font-family: 'Kalam', cursive;
   font-weight: 400;
   font-size: 1.4rem;
   color: rgba(0, 0, 0, 0.644);
