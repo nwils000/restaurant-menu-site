@@ -59,7 +59,7 @@
 }
 
 .footer-first-section div:last-of-type {
-  width: 20rem;
+  width: 19rem;
 }
 
 .footer-logo {
@@ -109,8 +109,11 @@
   }
 }
 
-@media screen and (max-width: 1185px) {
+@media screen and (max-width: 700px) {
   .main-footer-content {
     padding: 2rem 3rem;
+  }
+  .footer-first-section div:last-of-type {
+    width: 16rem;
   }
 }
