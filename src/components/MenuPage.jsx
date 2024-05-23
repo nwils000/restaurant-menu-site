@@ -12,7 +12,7 @@ export default function MenuPage() {
   function sortOutCuisineTypes(array) {
     let allCuisineTypes = [];
     for (let object of array) {
-      allCuisineTypes.push(object.cuisine_type);
+      allCuisineTypes.push(object.cuisine_type.name);
     }
     let sortedArray = allCuisineTypes.sort();
     return sortedArray.filter((e, i) => sortedArray.indexOf(e) === i);
@@ -32,12 +32,16 @@ export default function MenuPage() {
     console.log('hiii', selectedCountry);
   }
 
+  useEffect(() => {
+    console.log(foodData);
+  }, [foodData]);
+
   // Fetches data and saves it in state on page load.
   useEffect(() => {
     async function fetchFoodData() {
       try {
         const res = await axios.get(
-          'https://raw.githubusercontent.com/bootcamp-students/random-restaurant-json/main/foodList.json'
+          'http://127.0.0.1:8000/all-food-information' // 'https://raw.githubusercontent.com/bootcamp-students/random-restaurant-json/main/foodList.json'
         );
         setFoodData(res.data);
         setSelectedCountry(sortOutCuisineTypes(res.data));

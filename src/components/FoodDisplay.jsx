@@ -1,6 +1,7 @@
 import Likes from './Likes';
 
 export default function FoodDisplay(props) {
+  console.log('props: ', props);
   return (
     <section className="food-display">
       <p>{`$${props.price}`}</p>
