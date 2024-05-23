@@ -107,7 +107,7 @@
 }
 
 .heart-circle:hover .heart {
-  color: rgb(245, 43, 43);
+  color: #052ec1ea;
 }
 
 .heart {
@@ -139,6 +139,9 @@
   top: 1rem;
   font-size: 2rem;
   font-weight: bolder;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .country-picker select {
@@ -149,6 +152,20 @@
   position: relative;
   bottom: 4px;
   margin-left: 1rem;
+}
+
+.cart-amount {
+  position: absolute;
+  top: -0.95rem;
+  z-index: 2;
+  left: 2.6rem;
+  color: white;
+  font-size: 1.8rem;
+}
+
+.cart-link {
+  font-size: 6rem;
+  position: relative;
 }
 
 @media screen and (max-width: 1410px) {

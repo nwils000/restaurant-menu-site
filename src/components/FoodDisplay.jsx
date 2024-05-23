@@ -1,4 +1,4 @@
-import Likes from './Likes';
+import CartButton from './CartButton';
 
 export default function FoodDisplay(props) {
   console.log('props: ', props);
@@ -9,7 +9,7 @@ export default function FoodDisplay(props) {
         <h3>{props.title}</h3>
         <p className="food-display-description">{props.description}</p>
       </div>
-      <Likes />
+      <CartButton title={props.title} price={props.price} />
     </section>
   );
 }

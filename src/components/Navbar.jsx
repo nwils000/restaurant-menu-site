@@ -13,6 +13,9 @@ export default function Navbar() {
         <Link className="nav-link" to="/reservations">
           Reservations
         </Link>
+        <Link className="nav-link" to="/checkout">
+          Checkout
+        </Link>
       </div>
     </div>
   );

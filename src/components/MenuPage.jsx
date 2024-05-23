@@ -2,11 +2,15 @@ import FoodSection from './FoodSection';
 import axios from 'axios';
 import '../styles/MenuPage.css';
 import { useEffect, useState } from 'react';
+import { IoMdCart } from 'react-icons/io';
+import { GlobalCartData } from '../main';
+import { useContext } from 'react';
 
 export default function MenuPage() {
   const [foodData, setFoodData] = useState([]);
   const [selectedCountry, setSelectedCountry] = useState([]);
   const [fullMenu, setFullMenu] = useState([]);
+  const { cartData } = useContext(GlobalCartData);
 
   // Function that loops through the JSON and returns an array of each unique cuisine type.
   function sortOutCuisineTypes(array) {
@@ -58,23 +62,29 @@ export default function MenuPage() {
     <div>
       <main className="menu-page">
         <div className="country-picker">
-          <label htmlFor="countries">Pick a Country</label>
-          <select id="countries" onChange={handleChange}>
-            <option key={-1} value={fullMenu}>
-              Full Menu
-            </option>
-            {/* Loops through array of cuisine types to create option elements. */}
-            {sortOutCuisineTypes(foodData).map((e) => {
-              return (
-                <option
-                  key={sortOutCuisineTypes(foodData).indexOf(e)}
-                  value={e}
-                >
-                  {e}
-                </option>
-              );
-            })}
-          </select>
+          <div>
+            <label htmlFor="countries">Pick a Country</label>
+            <select id="countries" onChange={handleChange}>
+              <option key={-1} value={fullMenu}>
+                Full Menu
+              </option>
+              {/* Loops through array of cuisine types to create option elements. */}
+              {sortOutCuisineTypes(foodData).map((e) => {
+                return (
+                  <option
+                    key={sortOutCuisineTypes(foodData).indexOf(e)}
+                    value={e}
+                  >
+                    {e}
+                  </option>
+                );
+              })}
+            </select>
+          </div>
+          <div style={{ position: 'relative' }}>
+            <p className="cart-amount">{cartData.totalAmountOfItems}</p>
+            <IoMdCart className="cart-link" />
+          </div>
         </div>
         <h1>Menu</h1>
         {/* Loops through the selected country and creates a FoodSection component for each*/}
